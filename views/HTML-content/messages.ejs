@@ -1,0 +1,114 @@
+
+<div class="ui padded grid" id='message-global-grid'>
+    
+    
+    <div class="column">
+
+        <h2 class="ui header no-anchor"> Welcome to Chat with us : <span class="current-user-pseudo">{{ user.pseudo}}</span></h2>
+
+            
+
+
+        <div id='global-message-pane'>
+
+            <div id="message-filter-pane">
+
+                <a v-on:click='handleFilterAllClick()' v-bind:class='returnFilterClass(filters.all)' class="ui mini label">
+                    All
+                </a>
+
+                <a v-if='user.ID != 1' class="ui mini label" v-bind:class='returnFilterClass(filters.me)' v-on:click='handleFilterClick("me")'>
+                    me
+                    <i v-if='filters.me' class="delete icon"></i>
+                </a>
+    
+                <a v-if='user.ID != 1' class="ui mini label" v-bind:class='returnFilterClass(filters.forMe)' v-on:click='handleFilterClick("forMe")'>
+                    mention : @{{user.pseudo}}
+                    <i v-if='filters.forMe' class="delete icon"></i>
+                </a>
+
+                <a class="ui mini label" v-bind:class='returnFilterClass(filters.forEveryone)' v-on:click='handleFilterClick("forEveryone")'>
+                    mention : @everyone
+                    <i v-if='filters.forEveryone' class="delete icon"></i>
+                </a>
+
+                <a v-if='user.ID != 1' class="ui mini label" v-bind:class='returnFilterClass(filters.follows)' v-on:click='handleFilterClick("follows")'>
+                    follows
+                    <i v-if='filters.follows' class="delete icon"></i>
+                </a>
+
+                <a  class="ui mini label" v-bind:class='returnFilterClass(filters.anonyms)' v-on:click='handleFilterClick("anonyms")'>
+                    anonyms
+                    <i v-if='filters.anonyms' class="delete icon"></i>
+                </a>
+
+            </div>
+            
+            
+            <div v-if='loading' id="messages-pane" class="ui list">
+
+
+                <div  v-for='message in messages' class="item my-message-item" v-if='filterMessage(message)'>
+                    <img v-on:click='handleMessageClick(message)' class="ui avatar image my-message-icon" v-bind:src="message.usrPic">
+
+                    <div class="content">
+                        <input type='hidden' class="my-message-user-id" v-bind:value='message.userID'>
+                        <input type='hidden' class="my-message-id" v-bind:value='message.ID'>
+                        <a class="header my-message-header"> <b v-on:click='handleMessageClick(message)' class="my-message-pseudo" v-html='returnPseudo(message)'> </b> <span v-if='message.selected' class="my-message-date">{{ moment(message.date).format("YYYY/MM/DD HH:mm:ss")}} </span>
+                            <div v-if='message.selected && user.ID != 1 && user.ID != message.userID' class="ui mini basic icon buttons my-message-buttons">
+                                <button class="mini ui button my-mention-button" title="mention"><i class="envelope icon"></i></button>
+                                <button title="follow" v-if='user.subscriptions.indexOf(message.userID) == -1 && message.userID != 1' v-on:click='handleAddFollowClick(message.userID)' class="mini ui button my-subscribe-button"><i class="user plus icon"></i></button>
+                                <button title="unfollow" v-if='user.subscriptions.indexOf(message.userID) >= 0 && message.userID != 1' v-on:click='handleRemoveFollowClick(message.userID)' class="mini ui button my-unsubscribe-button"><i class="user times icon"></i></button>
+                            </div>
+                        </a>
+                        <div class="description" v-html=" displayMessageWithMention(message.content)">  </div>
+
+                        <div class="my-reations" >
+                            <div class="mini ui labeled button" v-bind:class='returnReactionClass(reaction)' v-for='reaction in Object.keys(message.reactions)' tabindex="0" v-if='message.reactions[reaction].length > 0'>
+                                <div v-on:click='handleReaction(message,reaction)' class="mini ui button my-reaction-button" >
+                                    <i class="icon" v-bind:class='reactionsIcons[reaction]' ></i> {{reaction.replace(/^\w/, (c) => c.toUpperCase())}}
+                                </div>
+                                <a class="my-label-reaction ui basic left pointing label">
+                                    {{message.reactions[reaction].length}}
+                                </a>
+                            </div>
+
+                            <div v-if="message.selected && user.ID != 1 " class="ui mini basic icon buttons my-reaction-buttons-bar">
+                                <button title="like" v-on:click='handleReaction(message,"like")' v-if="message.reactions.like.length == 0" class="mini ui button my-like-button"><i class="thumbs up icon"></i></button>
+                                <button title="dislike" v-on:click='handleReaction(message,"dislike")' v-if="message.reactions.dislike.length == 0" class="mini ui button my-dislike-button"><i class="thumbs down icon"></i></button>
+                                <button title="basketball" v-on:click='handleReaction(message,"basketball")' v-if="message.reactions.basketball.length == 0" class="mini ui button my-basketball-button"><i class="basketball ball plus icon"></i></button>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+
+            </div>
+
+            <div v-else>
+                Loading Message ...
+            </div>
+            
+            <div id="message-input-pane">
+
+                
+                <textarea maxlength="140" id="my-input-message" v-model='myMessage.content' placeholder="Enter your message...">
+
+                </textarea>
+
+                <div id="message-input-button-pane">
+                    <button class="circular ui blue right labeled icon button" id="my-input-message-button">
+                        <i class="right paper plane icon"></i>
+                        Send
+                    </button>
+                </div>
+            
+            </div>
+
+        </div>
+
+    </div>
+</div>

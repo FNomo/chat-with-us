@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+
+        <!--Mise en forme du titre de la page-->
+        <title>Chat with us</title>
+        <!--link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"-->
+        
+
+        <!--Sert pour importer des script en ligne-->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+
+        <!--Fichiers de style en ligne-->
+        <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+
+        <!-- Fichier de script et css personnel-->
+        <link rel="stylesheet" href="/assets/CSS-content/Main.css"/>
+        <link rel="stylesheet" href="/assets/CSS-content/Messages.css"/>
+        <link rel="stylesheet" href="/assets/CSS-content/Users.css"/>
+
+        <!-- Regle la favicon.ico erreur-->
+        <link rel="shortcut icon" href="#" />
+    </head>
+    <body >
+        <div id="app" class="">
+            <header id='head' class="">
+                <!-- Definit l'entete de la page-->
+
+                <%-include ('./menu.ejs') ;%>
+                
+            </header>  
+            <div class="ui one column stackable center aligned page grid">
+                <div class="column twelve wide">
+                    <%-include ('./log-panel.ejs') ;%>
+                </div>
+             </div>     

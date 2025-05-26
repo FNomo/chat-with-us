@@ -1,0 +1,253 @@
+/**
+ * Stylisation des messages
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+/** Partie filtre */
+#message-filter-pane .my-filter-active {
+    color:red;
+}
+
+/** Titre de la page */
+#message-global-grid .header ,
+#menu-profil #profil-infos-pane-grid h2{
+    color : #640b26 ;
+    font-family: 'Pattaya', sans-serif;
+}
+
+/** les Panels des messages */
+
+#global-message-pane {
+    border-style: solid;
+    border-width: 1px;
+    padding: 3%;
+}
+
+#messages-pane{
+    margin-top: 3%;
+    overflow-y: scroll;
+    height: 400px;
+}
+
+#messages-pane .content {
+    max-width: 50%;
+}
+
+#message-input-pane{
+    height: 175px;
+}
+
+/** les filtres des messages  */
+#message-filter-pane .label{
+    color:#AAAAAA;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #AAAAAA;
+}
+
+#message-filter-pane .my-filter-active {
+    color:white;
+    background-color: #AAAAAA;
+}
+
+.my-message-item + .my-message-item{
+    margin-top: 3%;
+}
+
+.my-message-item .content{
+    min-width: 250px;
+}
+
+/** Contenu des message */
+
+#messages-pane .my-message-date{
+    margin-left: 2%;
+    margin-right: 3%;
+    color : rgba(0,0,0,.3) ;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#messages-pane .my-message-buttons{
+    border-style: none;
+}
+
+#messages-pane .my-message-buttons  button ,
+#search-result-container-pane .my-search-remove-user,
+#search-result-container-pane .my-search-add-user{
+    margin: 4px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#messages-pane .my-message-buttons .my-mention-button ,
+#messages-pane .my-message-buttons .my-mention-button .icon{
+    border-color: #4183c4;
+    color: #4183c4 ;
+}
+
+#messages-pane .my-message-buttons .my-subscribe-button ,
+#messages-pane .my-message-buttons .my-subscribe-button .icon,
+#search-result-container-pane  .my-subscribe-button,
+#search-result-container-pane  .my-subscribe-button .icon{
+    border-color: #21ba45;
+    color: #21ba45 ;
+}
+
+#messages-pane .my-message-buttons .my-unsubscribe-button ,
+#messages-pane .my-message-buttons .my-unsubscribe-button .icon,
+#search-result-container-pane .my-search-remove-user,
+#search-result-container-pane .my-search-remove-user .icon{
+    border-color: #ff0800;
+    color: #ff0800 ;
+}
+
+.description{
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+#messages-pane .my-message-icon {
+    border-style: solid;
+    border-width: 1px;
+    padding: 2px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.7)
+}
+
+/** Les reactions d un message */
+
+.my-reaction-like-pane .icon{
+    color : white ;
+}
+
+.my-reaction-like-pane .my-reaction-button , .my-reaction-like-pane .my-reaction-button:hover{
+    background-color: #3b5998;
+    color : white ;
+}
+
+#messages-pane .my-reaction-like-pane .my-label-reaction{
+    color : #3b5998;
+    border-color: #3b5998;
+}
+
+.my-reaction-dislike-pane .icon{
+    color : #3b5998 ;
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.7)
+}
+
+.my-reaction-dislike-pane .my-reaction-button ,
+.my-reaction-dislike-pane .my-reaction-button:hover{
+    background-color: white;
+    border-style: solid;
+    border-width: 1px 0px 1px 1px;
+    color : #3b5998 ;
+}
+
+#messages-pane .my-reaction-dislike-pane .my-label-reaction{
+    color : #3b5998;
+    border-color: #3b5998;
+}
+
+.my-reaction-basketball-pane .icon{
+    color : white ;
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.7)
+}
+
+.my-reaction-basketball-pane .my-reaction-button ,
+.my-reaction-basketball-pane .my-reaction-button:hover{
+    background-color: #f2711c;
+    color : white ;
+}
+
+#messages-pane .my-reaction-basketball-pane .my-label-reaction{
+    color : #f2711c;
+    border-color: #f2711c;
+}
+
+#messages-pane .my-add-reaction-button{
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    color : #AAAAAA ;
+}
+
+#messages-pane .my-add-reaction-button .icon{
+    color : white;
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.7)
+}
+
+#messages-pane .my-reaction-buttons-bar {
+    border-style: none;
+}
+
+#messages-pane .my-reaction-buttons-bar button{
+    margin-left: 4%;
+    border-style: none;
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.7) ;
+}
+
+#messages-pane .my-reaction-buttons-bar button .icon{
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.7) ;
+}
+
+#messages-pane .my-like-button .icon ,
+#messages-pane .my-dislike-button .icon{
+    color : #3b5998;
+}
+
+#messages-pane .my-basketball-button .icon {
+    color : #f2711c;
+}
+
+
+/** Coloration des pseudo */
+.my-message-pseudo{
+    color:black;
+    font-family: 'KoHo', sans-serif;
+}
+
+.current-user-pseudo{
+    color:#4183c4;
+    font-family: 'KoHo', sans-serif;
+}
+
+.follower-user-pseudo{
+    color:#2ECC40;
+}
+
+.follow-user-pseudo{
+    color:#B10DC9;
+}
+
+.description .my-mention-pseudo {
+    color : #aaa ;
+}
+
+/** Stylisation de l'input du mesage */
+#message-input-button-pane {
+    display: table;
+    margin: 0px auto;
+}
+
+#my-input-message{
+    width: 100%;
+    margin-bottom: 3%;
+    padding: 2%;
+    resize: none;
+}
+
+#my-input-message-button{
+    min-width: 250px;
+}
+
+#my-input-message-button:hover{
+    transform: translateY(5px);
+    box-shadow: 0px 15px 20px rgba(33, 133, 208, 0.4);
+}
+
+#my-input-message-button .icon{
+    background-color: rgba(0,0,0,.0);
+}

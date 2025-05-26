@@ -1,0 +1,26 @@
+{
+  "name": "chat-with-us",
+  "version": "1.0.0",
+  "description": "Il s'agit du projet demander pour le cours de PW6",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gaufre.informatique.univ-paris-diderot.fr:zobonomo/chat-with-us.git"
+  },
+  "author": "Franc Zobo Nomo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7",
+    "socket.io": "^4.0.2"
+  }
+}

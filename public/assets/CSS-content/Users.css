@@ -1,0 +1,246 @@
+/** Stylisation de la barre de recherche */
+
+#my-search-bar {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+/** Stylisation du resultat */
+
+#search-result-container{
+    min-height: 700px;
+}
+
+#search-result-container-pane{
+    padding: 2%;
+    max-height: 500px;
+    overflow-y: scroll;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+#search-result-container-pane .my-search-item{
+    display: inline-block;
+    margin-bottom: 4%;
+    margin-right: 4%;
+}
+
+#search-result-container-pane .my-seach-pseudo{
+    color : #4183c4 ;
+}
+
+#search-result-container-pane .my-search-lastname , #search-result-container-pane .my-search-firstname{
+    color : #B10DC9 ;
+}
+
+#search-result-container-pane .my-search-is-me{
+    margin-right: 1%;
+    color : rgba(0,0,0,.4) ;
+    font-size: 75%;
+    font-style: italic;
+}
+
+#search-result-container-pane .my-search-buttons{
+    border-style: none;
+}
+
+/** Partie menu ptofil */
+
+/** Stylisation de la selction d'un parametre */
+.edit-block-selected {
+    border-color: #640b26;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 20px;
+    box-shadow: 0 0 0 7px  rgba(255, 255, 255, 0.85) ,
+    0  0  7px  7px rgba(20, 20, 20, 0.25) ,
+    inset 0 0 35px 2px rgba(20, 20, 20, 0.25);
+}
+
+#content-block-firstname-block ,
+#my-edit-description ,
+#my-edit-picture-box,
+#content-block-pseudo-input-block{
+    margin-bottom: 3%;
+}
+
+#menu-profil #profil-infos-pane-grid h3{
+    color : #640b26 ;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#my-buttons-save-or-cancel .or::before {
+    box-shadow: 0 0 0 2px  rgba(255, 255, 255, 0.85) ,
+    inset 0 0 2px 2px rgba(20, 20, 20, 0.25);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3) ;
+}
+
+#my-edit-save ,
+.edit-block-selected #content-block-password-pane .my-edit-save,
+#my-edit-cancel{
+    box-shadow: inset 0 0 3px 3px rgba(255, 255, 255, 0.85);
+    text-shadow: 4px 4px 4px rgba(0,0,0,0.3) ;
+}
+
+/** Editing du prenom et du nom*/
+#content-block-firstname-block{
+    margin-right: 3%;
+    margin-bottom: 3%;
+}
+
+#content-block-pseudo-input-block{
+    margin-right: 3%;
+}
+
+.edit-block-selected #content-block-firstname-block .label,
+.edit-block-selected #content-block-lastname-block .label{
+    background-color: #640b26;
+    color:white;
+}
+
+.edit-block-selected #my-edit-firstname ,
+.edit-block-selected #my-edit-lastname {
+    border-color: #640b26;
+}
+
+.edit-block-selected #my-edit-firstname:focus ,
+.edit-block-selected #my-edit-lastname:focus,
+.edit-block-selected #my-edit-description:focus,
+.edit-block-selected #my-edit-pseudo:focus,
+.edit-block-selected #my-edit-password-ask:focus,
+.edit-block-selected #my-edit-password-edit:focus,
+.edit-block-selected #my-edit-password-confirm:focus{
+    box-shadow: 1px 1px 12px #555;
+}
+
+/** Edition de la description */
+#my-edit-description{
+    padding: 2%;
+}
+
+.edit-block-selected #my-edit-description{
+    border-color : #640b26 ;
+}
+
+/** Edition de l'image */
+#my-edit-picture{
+    border-style: none;
+    border-width: 1px;
+    border-color: #640b26;
+    padding: 2%;
+    box-shadow: 0 0 0 7px  rgba(255, 255, 255, 0.85) ,
+    0  0  7px  7px rgba(20, 20, 20, 0.25) ,
+    inset 0 0 15px 2px rgba(20, 20, 20, 0.25);
+}
+
+.edit-block-selected #my-edit-picture{
+    border-style: solid;
+    box-shadow: 1px 1px 12px #640b26;
+}
+
+#my-edit-picture-choose-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-edit-picture-choose{
+    display: none;
+}
+
+#my-pic-upload-button .icon{
+    font-size: 150%;
+    color : white;
+    background: linear-gradient(#921239, #9198e5);
+    box-shadow: 0 0 0 2px  rgba(255, 255, 255, 0.85) ,
+    inset 0 0 2px 2px rgba(20, 20, 20, 0.25);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3) ;  
+    border-style: none;
+}
+
+#my-pic-upload-button{
+    height: 50px;
+    margin-left: 1%;
+    font-size: 120%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-style: none;
+    background: linear-gradient(#921239, #9198e5);
+    border-left-width: 1px;
+    color: white;
+    box-shadow: 0 0 0 2px  rgba(255, 255, 255, 0.85) ,
+    inset 0 0 2px 2px rgba(20, 20, 20, 0.25);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3) ;  
+}
+
+#my-pic-upload-button:hover{
+    color: #640b26;
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 20px rgba(0, 116, 217, 0.4);
+}
+
+#my-pic-upload-button:hover .icon{
+    border-color: #640b26;
+    color: #640b26;
+}
+
+/** Edition du pseudo */
+#my-edit-pseudo{
+    color:#4183c4;
+}
+
+.edit-block-selected #my-edit-pseudo:focus{
+    color: black;
+}
+
+/** Edition du mot de passe */
+#log-in-error-message{
+    width: 100%;
+}
+
+#my-edit-password-ask-pane{
+    margin-bottom: 3%;
+}
+
+#my-edit-password-ask-pane .my-correct{
+    background-color: #90ee90;
+    color:white ;
+}
+
+.edit-block-selected #my-edit-password-edit-pane{
+    margin-right: 2%;
+}
+.edit-block-selected #content-block-password-pane input{
+    margin-bottom: 4%;
+}
+
+.edit-block-selected #content-block-password-pane #my-edit-password-ask,
+.edit-block-selected #content-block-password-pane #my-edit-password-edit,
+.edit-block-selected #content-block-password-pane #my-edit-password-confirm{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #640b26;
+}
+
+/** Bouton envoie de mot de passe */
+
+.edit-block-selected #my-edit-password-button{
+    margin-left: 2%;
+}
+
+.edit-block-selected #content-block-password-pane .my-edit-save{
+    color: white;
+    border-color: #21ba45;
+    background-color: #21ba45;
+}
+
+.edit-block-selected #content-block-password-pane #my-edit-cancel{
+    color: white;
+    background-color: #db2828;
+}

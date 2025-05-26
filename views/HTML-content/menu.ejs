@@ -1,0 +1,74 @@
+<div id='menu-bar' class="ui secondary pointing menu">
+  
+  <a class="item active my-menu" id="menu-home">
+    Home
+  </a>
+
+  <a v-if='user.ID != 1' class="item my-menu" id="menu-profil">
+    Profil
+  </a>
+
+  <a v-if='user.ID != 1' class="item my-menu" id="menu-search">
+    Search
+  </a>
+
+  <div class="right menu">
+
+    <div class="item">
+      <div v-if='user.ID == 1' id='log-in-menu-button' class="circular ui animated button" tabindex="0">
+
+        <div class="visible content">
+          Log in
+        </div>
+        
+        <div class="hidden content">
+          <i class="user icon"></i>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="item">
+      <div v-if='user.ID == 1' id='sign-in-menu-button' class="circular ui animated button" tabindex="0">
+
+        <div class="visible content">
+          Sign in
+        </div>
+        
+        <div class="hidden content">
+          <i class="sign-in icon"></i>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div class="item">
+      <div v-if='user.ID != 1' id='log-out-button' class="circular ui animated button" tabindex="0">
+
+        <div class="visible content">
+          Log out
+        </div>
+        
+        <div class="hidden content">
+          <i class="power off icon"></i>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div title="users onlines" class="ui item">
+      <i aria-hidden="true" class="users icon"></i>
+      <div class="ui green label">{{usersOnline }}</div>
+    </div>
+
+    <div title="anonyms onlines" class="ui item">
+      <i aria-hidden="true" class="user secret icon"></i>
+      <div class="ui green label">{{anonymsOnline }}</div>
+    </div>
+
+  </div>
+
+</div>

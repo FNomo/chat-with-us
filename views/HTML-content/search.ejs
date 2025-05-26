@@ -1,0 +1,66 @@
+
+<div class="ui fluid action input" id="my-search-bar">
+    <input id='my-input-search' type="text" placeholder="Search user...">
+    <div id='my-input-search-button' class="ui button">Search</div>
+</div>
+
+<div class="container" id="search-result-container">
+    <h2 class="ui header no-anchor">
+        Search result :
+    </h2>
+
+    <div v-if='search.length == 0'>
+        No result ...
+    </div>
+
+    <div v-else id="search-result-container-pane">
+
+        <div class="ui card my-search-item" v-for='usr in search'>
+            
+            <div class="content">
+                <i v-if='usr.online' class="green right floated circle icon"></i>
+                <span v-if='usr.ID == user.ID' class="right floated my-search-is-me">(me)</span>
+
+                <div class="header">
+                    <span v-if='usr.lastname' class="my-search-lastname">
+                        {{usr.lastname}}
+                    </span>
+
+                    <span v-else class="my-search-lastname">
+                        No lastname
+                    </span>,
+                    
+                    <span v-if='usr.firstname' class="my-search-firstname">
+                        {{usr.firstname}}
+                    </span>
+
+                    <span v-else class="my-search-firstname">
+                        No firstname
+                    </span>
+                </div>
+              <div class="meta">
+                <span>Register in {{moment(usr.creationDate).format("YYYY/MM/DD")}}</span>
+                <a class="my-seach-pseudo">@{{usr.pseudo}}</a>
+              </div>
+              <div class="description">
+                <p>{{usr.userDescription}}</p>
+              </div>
+            </div>
+
+            <div class="extra content">
+              
+                <span v-if='usr.ID != user.ID' class="right floated">
+
+                    <div  class="ui basic icon buttons my-search-buttons">
+                        <button v-if='user.subscriptions.indexOf(usr.ID) >= 0' v-on:click='handleRemoveFollowClick(usr.ID)' class="ui button my-search-remove-user"><i class="user times icon"></i></button>
+                        <button v-else v-on:click='handleAddFollowClick(usr.ID)' class="ui button my-subscribe-button my-search-add-user"><i class="user plus icon"></i></button>
+                    </div>
+                </span>
+
+
+            </div>
+
+        </div>
+        
+    </div>
+</div>

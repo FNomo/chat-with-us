@@ -1,0 +1,6 @@
+{
+    "port" : 8080,
+    "DBuser" : "franc",
+    "DBpassword" : "",
+    "DBDataBase" : "chat_with_us"
+}

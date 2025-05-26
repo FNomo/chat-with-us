@@ -1,0 +1,20 @@
+<%-include ('./header.ejs') ;%>
+
+            <!-- Definit le contenu principale de la page-->
+           
+            <div id='page-main-pane' class="main ui container">
+                <div v-if='menu == "profil"' id="menu-profil" >
+                    <%-include ('./profil.ejs') ;%>
+                </div>
+
+                <div v-else-if='menu == "search"' id="menu-search">
+                    <%-include ('./search.ejs') ;%>
+                </div>
+
+                <div v-else id="menu-messages">
+                    <%-include ('./messages.ejs') ;%>
+                </div>
+            </div>
+            
+
+<%-include ('./footer.ejs') ;%>

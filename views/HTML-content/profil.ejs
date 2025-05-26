@@ -1,0 +1,183 @@
+
+<div class="ui padded grid" id='profil-infos-pane-grid'>
+    
+    <div class="column">
+        <h2 class="ui header no-anchor"> Global Informations </h2>
+
+            
+        <div id='content-block-names' class="my-edit-block">
+
+            <div class="ui vertically padded grid">
+
+                <div class="equal width row">
+                    <div class="column">
+                        <div>
+                            <h3 class="ui header no-anchor">Firstname & lastname</h3>
+                            <p>Your firstname and lastname. These will only be visible to your friends. </p>
+                        </div>
+                    </div>
+                    <div class='right aligned column' >
+                        <div class="ui green tiny compact text labeled icon menu my-edit-button">
+                            <a class="item"> <i class="grey edit icon"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    
+                    <div class="wide column">
+                        <div class="ui labeled input" id="content-block-firstname-block">
+                            <div class="ui label">
+                            Firstname :
+                            </div>
+                            <input maxlength="15" class="my-edit-input" id='my-edit-firstname' type="text" v-model='modifs.firstname' disabled>
+                        </div>
+
+                        <div class="ui labeled input" id="content-block-lastname-block">
+                            <div class="ui label">
+                            Lastname :
+                            </div>
+                            <input maxlength="15" class="my-edit-input" id='my-edit-lastname' type="text" v-model='modifs.lastname' disabled>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id='content-block-desciption' class="my-edit-block">
+
+            <div class="ui vertically padded grid">
+
+                <div class="equal width row">
+                    <div class="column">
+                        <div>
+                            <h3 class="ui header no-anchor">Description</h3>
+                            <p>A few words that describe you. </p>
+                        </div>
+                    </div>
+                    <div class='right aligned column' >
+                        <div class="ui green tiny compact text labeled icon menu my-edit-button">
+                            <a class="item"> <i class="grey edit icon"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="wide column">
+                        <textarea maxlength="140" id="my-edit-description" class="my-edit-input" style="width: 100%; max-width: 100%;resize: none;" v-model='modifs.userDescription' disabled></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id='content-block-picture' class="my-edit-block">
+
+            <div class="ui vertically padded grid">
+
+                <div class="equal width row">
+                    <div class="column">
+                        <div>
+                            <h3 class="ui header no-anchor">Picture</h3>
+                            <p>An image that represents you to other users. </p>
+                        </div>
+                    </div>
+                    <div class='right aligned' >
+                        <div  class="ui green tiny compact text labeled icon menu my-edit-button">
+                            <a class="item"> <i class="grey edit icon"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row" id="content-block-picture-pane">
+
+                    <div id="my-edit-picture-box" class="eight wide column" >
+                            <img id="my-edit-picture" class="ui medium circular image" v-bind:src="user.pictureSrc">
+                    </div>
+
+                    <div class="eight wide column" id="my-edit-picture-choose-box" >
+                        
+                    </div>
+
+                    <div class="eight wide column" id="my-edit-picture-buttons-box">
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <h2 class="ui header no-anchor"> Personnal Informations </h2>
+
+        <div id='content-block-pseudo' class="my-edit-block">
+
+            <div class="ui vertically padded grid">
+
+                <div class="equal width row">
+                    <div class="column">
+                        <div>
+                            <h3 class="ui header no-anchor">Pseudo</h3>
+                            <p>Your pseudo that will identify you on the server.</p>
+                        </div>
+                    </div>
+                    <div class='right aligned column' >
+                        <div class="ui green tiny compact text labeled icon menu my-edit-button">
+                            <a class="item"> <i class="grey edit icon"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <div class="ui input" id="content-block-pseudo-input-block">
+                            <input maxlength="15" class="my-edit-input" id="my-edit-pseudo" type="text" v-model='modifs.pseudo' disabled>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id='content-block-password' class="my-edit-block">
+
+            <div class="ui vertically padded grid">
+
+                <div class="equal width row">
+                    <div class="column">
+                        <div>
+                            <h3 class="ui header no-anchor">Password</h3>
+                            <p>The password used to connect to the server. </p>
+                        </div>
+                    </div>
+                    <div class='right aligned column' >
+                        <div class="ui green tiny compact text labeled icon menu my-edit-button">
+                            <a class="item"> <i class="grey edit icon"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="wide column" id="content-block-password-pane">
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

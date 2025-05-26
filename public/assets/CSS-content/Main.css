@@ -1,0 +1,119 @@
+.edit-block-selected {
+    border-color: black;
+    border-style: solid;
+    border-width: 4px;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 20px;
+}
+
+/** Stylisation de la barre du menu */
+#menu-bar{
+    padding-top: 5%;
+    background-color:#8a1538 ;
+    
+}
+
+#menu-bar .icon ,#menu-bar .my-menu {
+    color : white;
+}
+
+#menu-bar .active{
+    border-color : #640b26;
+    font-weight:bolder;
+    border-width: 5px;
+}
+
+#log-out-button{
+   color: #ff0800;
+   background-color: white;
+   border-style: none;
+   margin-bottom: 4%;
+   box-shadow: 0 0 0 2px  rgba(255, 255, 255, 0.85) ,
+    inset 0 0 2px 2px rgba(20, 20, 20, 0.25);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3) ;
+}
+
+#log-out-button:hover{
+    background-color: #ff0800;
+    font-weight: bolder;
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 20px rgba(255, 8, 0, 0.4);
+ }
+
+#menu-bar .ui .label{
+    margin-left: 1%;
+}
+
+#log-in-menu-button{
+    color: #21ba45;
+    background-color: white;
+    border-style: none;
+    margin-bottom: 4%;
+    box-shadow: 0 0 0 2px  rgba(255, 255, 255, 0.85) ,
+    inset 0 0 2px 2px rgba(20, 20, 20, 0.25);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+#log-in-menu-button:hover , #log-in-menu-button:focus{
+    background-color: #21ba45;
+    font-weight: bolder;
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 20px rgba(33, 186, 69, 0.4);
+ } 
+
+#sign-in-menu-button{
+    color: #0074D9 ;
+    background-color: white;
+    border-style: none;
+    margin-bottom: 4%;
+    box-shadow: 0 0 0 2px  rgba(255, 255, 255, 0.85) ,
+    inset 0 0 2px 2px rgba(20, 20, 20, 0.25);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+#sign-in-menu-button:hover , #sign-in-menu-button:focus{
+    background-color: #0074D9 ;
+    font-weight: bolder;
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 20px rgba(0, 116, 217, 0.4);
+ }
+
+/** Stylisation des objet de log */
+
+ #log-in-pane , #sign-in-pane {
+     margin : 2% ;
+     padding: 2%;
+     border-style: solid;
+     border-color: #640b26;
+     box-shadow: 10px 10px rgba(0,0,0,0.10);
+ }
+
+#log-in-pane .header , #log-in-pane label ,#sign-in-pane .header , #sign-in-pane label {
+    color : #640b26;
+}
+
+#log-in-submit , #sign-in-submit{
+    border-style: solid;
+    border-width: 2px;
+    color : #640b26 ;
+    border-color: #640b26 ;
+    background-color:white ;
+    box-shadow: 0 0 0 2px  rgba(255, 255, 255, 0.85) ,
+    inset 0 0 2px 2px rgba(20, 20, 20, 0.25);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3)
+}
+
+#log-in-submit:hover ,#sign-in-submit:hover{
+    background-color:#640b26 ;
+    color : white ;
+    border-color: #640b26 ;
+    transform: translateY(+3px);
+    box-shadow: 0px 15px 20px rgba(100, 11, 38, 0.4);
+}
+
+/** Stylisation des messages */
+
+#page-main-pane .message {
+    margin-top: 2%;
+}

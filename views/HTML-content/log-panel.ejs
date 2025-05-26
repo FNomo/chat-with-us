@@ -1,0 +1,69 @@
+<div id="log-pane">
+    
+    <div id='log-in-pane' v-if='logInStatus'>
+        <h2 class="ui header">
+            <i class="id card icon"></i>
+            <div class="content">
+              Log in
+            </div>
+        </h2>
+
+        <div id='log-in-form' class="ui form">
+
+            <div class="two fields">
+              
+                <div class="field">
+                    <label>Pseudo</label>
+                    <input type="text" placeholder="Your pseudo ..." id='log-in-pseudo' maxlength="15">
+                </div>
+
+                <div class="field">
+                    <label>password</label>
+                    <input type="password" id='log-in-password' maxlength="15">
+                </div>
+
+            </div>
+
+            <div class="ui submit button" id="log-in-submit">connect</div>
+
+        </div>
+
+    </div>
+
+    <div id='sign-in-pane' v-if='signInStatus'>
+        <h2 class="ui header">
+            <i class="user circle icon"></i>
+            <div class="content">
+              Sign in
+            </div>
+        </h2>
+
+        <div id='sign-in-form' class="ui form">
+
+            <div class="three fields">
+              
+                <div class="field">
+                    <label>Pseudo</label>
+                    <input type="text" placeholder="Your pseudo ..." id='sign-in-pseudo' maxlength="15">
+                </div>
+
+                <div class="field">
+                    <label>Password</label>
+                    <input type="password" maxlength="15" id='sign-in-password'>
+                </div>
+
+                <div class="field">
+                    <label>Confirm</label>
+                    <input type="password" id='sign-in-password-confirm' maxlength="15">
+                </div>
+
+            </div>
+
+            <div class="ui submit button" id="sign-in-submit">register</div>
+
+        </div>
+
+    </div>
+
+
+</div>
